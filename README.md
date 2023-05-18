@@ -80,6 +80,8 @@ The project uses the Adafruit SI5351 library, and the math for the clocks was ca
     <li>Sense</li>
     <li>(SO)Clock Out</li>
   </ul>
+<br>
+I would suggest using another install diagram, but buzzing out the points to ones that are more suitable for this boards solder pads. Often you will end up scraping back the green layer on the PCB to create a point.
 
 <br>
 <br>
