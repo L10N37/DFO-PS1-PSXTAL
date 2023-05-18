@@ -53,7 +53,7 @@ The project uses the Adafruit SI5351 library, and the math for the clocks was ca
 
 
  PAL:
- For PU8 / PU18, this frequency divided by 12 equates your colourburst freqency.<br>
+ For PU8 / PU18, this frequency divided by 12 equates to your colourburst frequency.<br>
  Actual: 4.43361875 MHz <br>
  This Board: 4.4335 Mhz
 
@@ -63,7 +63,7 @@ The project uses the Adafruit SI5351 library, and the math for the clocks was ca
 <br>
 
  NTSC: 
- For PU8 / PU18, this frequency divided by 15 equates your colourburst freqency.<br>
+ For PU8 / PU18, this frequency divided by 15 equates to your colourburst frequency.<br>
  Actual: 3.57954 MHz <br>
  This Board: 3.57936Mhz
 
