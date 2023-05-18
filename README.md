@@ -3,6 +3,12 @@
 
   <h1>PSXTAL DFO - Dual Frequency Oscillator for PS1</h1>
 
+<br>
+  
+Goes well with my [In Game Reset!](https://github.com/L10N37/PS1-IGR-in-game-reset-PlayStation-Sony-psone)
+
+<br>
+
 ![SI5351](https://github.com/L10N37/PSXTAL/blob/main/PSXTAL-DFO/SI5351Header.png?raw=true)
 
 <br>
