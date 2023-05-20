@@ -99,7 +99,7 @@ I would suggest using another install diagram, but buzzing out the points to one
   * 53.2034 MHz is for PAL (Europe, Australia, New Zealand and parts of Asia.)
   * 53.693175 MHz is for NTSC (North America, Japan)
 
-  PAL Consoles always start with sense pin high (NTSC mode momentarily) before the BIOS kicks in and initialises the screen. Shortly after power-up, this signal/ pin is pulled to ground and the console will divide the GPU clock by 12. This gives you the 4.43Mhz you need to produce PAL colours on your set when using S-Video or Composite output. The problem when running an NTSC game on these consoles, is that the console will divide the GPU clock by 15 in NTSC mode. Using an approximation of  53.2 / 15, this gives you about a 3.54Mhz subcarrier signal. This isn't valid clock signal and you get a black and white picture.
+  PAL Consoles always start with sense pin high (NTSC mode momentarily) before the BIOS kicks in and initialises the screen. Shortly after power-up, this signal/ pin is pulled to ground and the console will divide the GPU clock by 12. This gives you the 4.43Mhz you need to produce PAL colours on your set when using S-Video or Composite output. The problem when running an NTSC game on these consoles, is that the console will divide the GPU clock by 15 in NTSC mode. Using an approximation of  53.2 / 15, this gives you about a 3.54Mhz subcarrier signal. This isn't a valid clock signal and you get a black and white picture.
 <br>
 <br>
 <h2> Old School Fix  </h2>
