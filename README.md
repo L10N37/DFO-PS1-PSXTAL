@@ -17,14 +17,14 @@ Goes well with my [In Game Reset!](https://github.com/L10N37/PS1-IGR-in-game-res
   <h1>Board Measurements:</h1>
   <p>Approximately 18.5mm * 18.5mm</p>
 
-  ![PCB](https://github.com/L10N37/PSXTAL/blob/main/PSXTAL-DFO/PCB_Image.png?raw=true)
+  ![PCB](https://github.com/L10N37/PSXTAL/blob/main/PSXTAL-DFO/PCB.png?raw=true)
   ![PCB](https://github.com/L10N37/DFO-PS1-PSXTAL/blob/main/V1_installed_top_mount.jpg?raw=true)
 <br>
 <br>
 
  <h1>PSXTAL DFO V2 Update / Notes</h1>
 
- ![PCB](https://github.com/L10N37/PSXTAL/blob/main/PSXTAL-DFO/V2_Update/PCB_Image.png?raw=true)
+ ![PCB](https://github.com/L10N37/DFO-PS1-PSXTAL/blob/main/V2_Update/PCB_Image.png?raw=true)
 
 Options for Reference clock for SI5351-
 
