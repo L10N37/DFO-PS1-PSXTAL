@@ -24,7 +24,7 @@ Goes well with my [In Game Reset!](https://github.com/L10N37/PS1-IGR-in-game-res
 
  <h1>PSXTAL DFO V2 Update / Notes</h1>
 
- ![PCB](https://github.com/L10N37/DFO-PS1-PSXTAL/blob/main/V2_Update/PCB_Image.png?raw=true)
+ ![PCB](https://github.com/L10N37/DFO-PS1-PSXTAL/blob/main/V2_Update/PCB_Image.png?raw=truegit)
 
 Options for Reference clock for SI5351-
 
