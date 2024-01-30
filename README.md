@@ -17,10 +17,35 @@ Goes well with my [In Game Reset!](https://github.com/L10N37/PS1-IGR-in-game-res
   <h1>Board Measurements:</h1>
   <p>Approximately 18.5mm * 18.5mm</p>
 
-  ![PCB](https://github.com/L10N37/PSXTAL/blob/main/PSXTAL-DFO/PCB.png?raw=true)
+  ![PCB](https://github.com/L10N37/PSXTAL/blob/main/PSXTAL-DFO/PCB_Image.png?raw=true)
+  ![PCB](https://github.com/L10N37/PSXTAL/blob/main/PSXTAL-DFO/V1_installed_top_mount.jpg?raw=true)
+<br>
+<br>
 
-<br>
-<br>
+ <h1>PSXTAL DFO V2 Update / Notes</h1>
+
+ ![PCB](https://github.com/L10N37/PSXTAL/blob/main/PSXTAL-DFO/V2_Update/PCB_Image.png?raw=true)
+
+Options for Reference clock for SI5351-
+
+The 25MHz 3225 reference oscillators come with a few different layouts, the original version 1 board suited JP2, 
+
+JP1: This is for E/D, OE or ST as oscillator pin 1 (Enable Control/ Enable Disable / Output Enable), this ties pin 1 to VCC but often you can leave this pad tri-state / floating, which the board will do by default. 
+
+JP2: This is for oscillators that have pin 1 as a ground, this ties pin 1 to ground. These often work floating (default)
+
+In most cases, you can leave the board as is with pin 1 floating,
+
+I grabbed a reference XTAL from a different bag of 25MHz 3225 XTALS on my last assembly of the board and this shorted out GND to the 3.3v rail. Annoying as hell, the 0603 footprints were way too small and I was installing 0402 components on them instead, this was still difficult. I assumed when I made the version 1 of the board they'd be the same size 0603 footprints I'd used on other boards. They definitely were not. They are now whopping 0805 footprints which should fit 0805, 0603 and 0402 components.
+
+
+Bypass clock out resistor
+
+JP3 -clock out resistor bypass: You don't need the output resistor for a top mount installatoin if you leave the factory one in place and solder to the old oscillator pads (preferred installation method). For bottom mount installations you will want to leave this open and install the resistor on the DFO board.
+
+
+A test pad has being added to check the reference clock out with a scope and make sure it's good as the SI5351 pins are tiny and difficult to probe.
+
 
   <h1>Components:</h1>
   <ul>
@@ -28,8 +53,8 @@ Goes well with my [In Game Reset!](https://github.com/L10N37/PS1-IGR-in-game-res
     <li><span class="component">1 * Atmega 328P MCU:</span> Clones from Ali are good in my experience. For flashing with the psxtal software that runs the show.</li>
     <li><span class="component">1 * SI5351 clock board, MSOP10 footprint:</span> Ali ones are fine in my experience, though I've read about bad batches. For generating the PS1 GPU clock frequency with glitchless frequency switching.</li>
     <li><span class="component">4 * 100nf (0.1uf) 0603 ceramic capacitors:</span> For bypass capacitors -- 2 for the MCU, 1 for the clock generator IC, 1 for the PLL/Reference oscillator.</li>
-    <li><span class="component">1 * 220r 0603 resistor:</span> In series on the clock out as per PS1 GPU clock. Originally jumpered (prototype) in case you wanted to top mount / replace the factory GPU oscillator. Instead, we can render that clock useless by removing the on-board 220r resistor on its clock output. I would still personally be removing the factory oscillator completely with hot air.</li>
-    <li><span class="component">1 * 25Mhz SMD oscillator:</span> This is used by the SI5351 clock gen IC as a reference clock, and any clock frequencies produced will be my mathematical stuff using this frequency. You need one that has a specific footprint of clock out, ground, VCC, and OE. The OE (output enable) is tied high on the board (to VCC) for permanent enable of clock out. There are some oscillators that have 2 ground legs instead. In this case, tying VCC to that leg is a short circuit. This is a magic smoke releaser :P</li>
+    <li><span class="component">1 * 220r 0603 resistor (bypass for top mount):</span> In series on the clock out as per PS1 GPU clock. Originally jumpered (prototype) in case you wanted to top mount / replace the factory GPU oscillator. Instead, we can render that clock useless by removing the on-board 220r resistor on its clock output. I would still personally be removing the factory oscillator completely with hot air.</li>
+    <li><span class="component">1 * 25Mhz SMD oscillator:</span> This is used by the SI5351 clock gen IC as a reference clock, please check jumper options</li>
   </ul>
 
 <br>
@@ -105,7 +130,7 @@ I would suggest using another install diagram, but buzzing out the points to one
 <h2> Old School Fix  </h2>
 <br>  
 
-  The 'old-school' fix to get colour was to take the video encoders sub carrier input pin, lift it off the board and feed it a perma-4.43Mhz PAL colour sub-carrier clock signal. This way, regardless of the PS1 being in PAL or NTSC Mode, you would still have the PAL sub carrier required to give you a colour picture. the *problem* with this is that, these days - scalers are very popular devices. Now when the console is in NTSC mode and using this 'old-school' sub carrier modification, we get around a 59.24hz refresh rate. The actual 60hz refresh rate, off memory, should be 59.84hz. This discrepancy causes frame drops, stuttering and other issues when combining this fix with a scaler. For CRT's, the small discepancy is a non issue. When using RGB, you'll get colour regardless (no fix required), but the small clock discrepancies are still prevelant.
+  The 'old-school' fix to get colour was to take the video encoders sub carrier input pin, lift it off the board and feed it a perma-4.43Mhz PAL colour sub-carrier clock signal. This way, regardless of the PS1 being in PAL or NTSC Mode, you would still have the PAL sub carrier required to give you a colour picture. the *problem* with this is that, these days - scalers are very popular devices. Now when the console is in NTSC mode and using this 'old-school' sub carrier modification, we get around a 59.24hz refresh rate. The actual 60hz refresh rate should be 59.94Hz. This discrepancy causes frame drops, stuttering and other issues when combining this fix with a scaler. For CRT's, the small discepancy is a non issue. When using RGB, you'll get colour regardless (no fix required), but the small clock discrepancies are still prevelant.
 
 <br>
 <br>
