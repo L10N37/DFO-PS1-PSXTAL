@@ -18,7 +18,7 @@ Goes well with my [In Game Reset!](https://github.com/L10N37/PS1-IGR-in-game-res
   <p>Approximately 18.5mm * 18.5mm</p>
 
   ![PCB](https://github.com/L10N37/PSXTAL/blob/main/PSXTAL-DFO/PCB_Image.png?raw=true)
-  ![PCB](https://github.com/L10N37/PSXTAL/blob/main/PSXTAL-DFO/V1_installed_top_mount.jpg?raw=true)
+  ![PCB](https://github.com/L10N37/DFO-PS1-PSXTAL/blob/main/V1_installed_top_mount.jpg?raw=true)
 <br>
 <br>
 
